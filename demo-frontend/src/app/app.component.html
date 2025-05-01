@@ -1,0 +1,13 @@
+<app-header />
+<main>
+  <mat-drawer-container class="sh-drawer-container">
+    <mat-drawer mode="side" [opened]="headerDrawerState.drawerState$ | async">
+      <app-drawer />
+    </mat-drawer>
+    <mat-drawer-content>
+      <section class="sh-content">
+        <router-outlet />
+      </section>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</main>

@@ -1,0 +1,30 @@
+%template-center-flex {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.sh-title {
+  flex: 1;
+  margin-inline-start: 1rem;
+  margin-inline-end: 1rem;
+  color: var(--mdc-text-button-label-text-color, var(--mat-app-primary));
+  font-weight: 500;
+  @extend %template-center-flex;
+}
+
+.sh-user {
+  margin-inline-end: 1rem;
+  font-size: 1rem;
+  @extend %template-center-flex;
+  span {
+    display: none;
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+  img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+  }
+}

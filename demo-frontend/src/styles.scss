@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  background-color: var(
+    --mat-sidenav-content-background-color,
+    var(--mat-app-background)
+  );
+}
+
+ag-grid-angular {
+  height: 60vh;
+}
+
+.custom-material-btn {
+  background-color: white;
+  color: #ffffff;
+  border: none;
+  padding: 6px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  &:hover {
+    background-color: #004a99;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+  }
+  &:active {
+    background-color: #003d80;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+  }
+}
+
+// OVERRIDE MATERIAL
+mat-form-field.is-small {
+  .mat-mdc-text-field-wrapper {
+    height: 45px !important;
+  }
+}

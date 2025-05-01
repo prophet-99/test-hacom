@@ -1,0 +1,22 @@
+<section class="sh-form-container">
+  <h4 mat-dialog-title>{{ form.value.id ? 'Editar Autor' : 'Nuevo Autor' }}</h4>
+
+  <form [formGroup]="form" (ngSubmit)="submit()" mat-dialog-content>
+    <mat-form-field appearance="fill" style="width: 100%">
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="nombre" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" style="width: 100%">
+      <mat-label>Género</mat-label>
+      <input matInput formControlName="genero" />
+    </mat-form-field>
+
+    <div mat-dialog-actions align="end">
+      <button mat-button type="button" (click)="cancel()">Cancelar</button>
+      <button mat-raised-button color="primary" type="submit">
+        {{ form.value.id ? 'Actualizar' : 'Crear' }}
+      </button>
+    </div>
+  </form>
+</section>

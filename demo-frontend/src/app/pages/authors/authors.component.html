@@ -1,0 +1,23 @@
+<section class="sh-header">
+  <h3>Autores</h3>
+  <button mat-raised-button color="primary" (click)="openCreateModal()">
+    Nuevo Autor
+  </button>
+</section>
+
+<mat-form-field appearance="outline" class="is-small" style="min-width: 250px">
+  <input
+    matInput
+    #filterTextBox
+    (input)="onFilterTextBoxChanged()"
+    placeholder="Filtrar por cualquier campo..."
+  />
+</mat-form-field>
+<ag-grid-angular
+  class="ag-theme-alpine"
+  style="width: 100%"
+  [rowData]="authors$ | async"
+  [columnDefs]="columnDefs"
+  rowSelection="single"
+  (gridReady)="onGridReady($event)"
+/>
