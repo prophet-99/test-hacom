@@ -1,0 +1,22 @@
+.sh-charts-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* izquierda más ancha */
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    'left-top right-top'
+    'left-bottom right-bottom';
+  gap: 1rem;
+
+  &__a {
+    grid-area: left-top;
+  }
+  &__b {
+    grid-area: right-top;
+  }
+  &__c {
+    grid-area: left-bottom;
+  }
+  &__d {
+    grid-area: right-bottom;
+  }
+}

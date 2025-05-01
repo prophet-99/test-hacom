@@ -10,6 +10,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { NgxEchartsModule } from 'ngx-echarts';
+import * as echarts from 'echarts';
 
 import { AuthorsComponent } from './authors/authors.component';
 import { BooksComponent } from './books/books.component';
@@ -18,6 +20,10 @@ import { PagesComponent } from './pages.component';
 import { PagesRoutingModule } from './pages-routing.module';
 import { AuthorFormComponent } from './authors/author-form/author-form.component';
 import { BookFormComponent } from './books/book-form/book-form.component';
+import { SummaryBooksComponent } from './dashboard/components/summary-books/summary-books.component';
+import { PublishedBooksComponent } from './dashboard/components/published-books/published-books.component';
+import { AuthorGenresComponent } from './dashboard/components/author-genres/author-genres.component';
+import { SimulateChartComponent } from './dashboard/components/simulate-chart/simulate-chart.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +33,10 @@ import { BookFormComponent } from './books/book-form/book-form.component';
     PagesComponent,
     AuthorFormComponent,
     BookFormComponent,
+    SummaryBooksComponent,
+    PublishedBooksComponent,
+    AuthorGenresComponent,
+    SimulateChartComponent,
   ],
   imports: [
     CommonModule,
@@ -40,6 +50,7 @@ import { BookFormComponent } from './books/book-form/book-form.component';
     MatCheckboxModule,
     MatDatepickerModule,
     MatSelectModule,
+    NgxEchartsModule.forRoot({ echarts }),
   ],
 })
 export class PagesModule {}
